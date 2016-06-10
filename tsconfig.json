@@ -5,10 +5,10 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "jsx": "react",
-        "outDir": "dist",
-        "declaration": true
+        "outDir": "dist"
     },
     "files": [
-        "auto-prop-component.tsx"
+        "index.ts",
+        "components/auto-prop-component.tsx"
     ]
 }
