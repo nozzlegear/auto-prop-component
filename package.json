@@ -1,11 +1,11 @@
 {
   "name": "auto-prop-component",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A small React component which lets you generically update a component's state rather than relying on dozens of tiny functions.",
   "main": "dist/index.js",
-  "typings": "index",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "prepublish": "typings install && tsc -p .",
+    "prepublish": "typings install && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,10 @@
     "react": "^15.1.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-string-replace": "github:tomaszczechowski/gulp-string-replace#1583099",
+    "gulp-typescript": "^2.13.6",
+    "merge2": "^1.0.2",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   }
