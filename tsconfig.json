@@ -6,11 +6,9 @@
         "sourceMap": false,
         "jsx": "react",
         "outDir": "dist",
-        "removeComments": true,
-        "declaration": true
+        "removeComments": true
     },
     "files": [
-        "index.ts",
-        "components/auto-prop-component.tsx"
+        "index.tsx"
     ]
 }
