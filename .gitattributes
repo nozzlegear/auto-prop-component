@@ -1,3 +1,4 @@
 
 dist/* linguist-vendored
-typings/* linguits-vendored
+typings/* linguist-vendored
+gulpfile.js linguist-vendored
