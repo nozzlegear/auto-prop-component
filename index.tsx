@@ -17,10 +17,10 @@ export class AutoPropComponent<P, S> extends React.Component<P, S>
      */
     public updateState(predicate: (state: S, newValue: any) => void, shouldParse = false)
     {
-        return (event: React.FormEvent) =>
+        return (event: React.FormEvent<{value: string}>) =>
         {
             let state = clone(this.state);
-            let value = event.target["value"];
+            let value = event.target.value;
             
             predicate(state, shouldParse ? JSON.parse(value) : value);
             

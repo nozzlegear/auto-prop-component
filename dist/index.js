@@ -16,7 +16,7 @@ var AutoPropComponent = (function (_super) {
         if (shouldParse === void 0) { shouldParse = false; }
         return function (event) {
             var state = lodash_1.clone(_this.state);
-            var value = event.target["value"];
+            var value = event.target.value;
             predicate(state, shouldParse ? JSON.parse(value) : value);
             _this.setState(state);
         };
