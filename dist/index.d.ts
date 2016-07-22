@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import * as React from 'react';
 export declare class AutoPropComponent<P, S> extends React.Component<P, S> {
     constructor(props: P);
