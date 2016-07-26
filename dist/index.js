@@ -11,7 +11,11 @@ var AutoPropComponent = (function (_super) {
     function AutoPropComponent(props) {
         _super.call(this, props);
     }
-    AutoPropComponent.prototype.updateState = function (predicate, shouldParse) {
+    AutoPropComponent.prototype.getAndUpdateState = function (predicate) {
+        var state = predicate(lodash_1.clone(this.state));
+        this.setState(state);
+    };
+    AutoPropComponent.prototype.updateStateFromEvent = function (predicate, shouldParse) {
         var _this = this;
         if (shouldParse === void 0) { shouldParse = false; }
         return function (event) {

@@ -12,10 +12,20 @@ export class AutoPropComponent<P, S> extends React.Component<P, S>
     }
     
     /**
+     * Gets a full copy of the state which can be operated on, then updates the state when the given function returns.
+     */
+    public getAndUpdateState(predicate: (state: S) => S)
+    {
+        const state = predicate(clone(this.state));
+
+        this.setState(state);
+    }
+
+    /**
      * Creates a callback function for React form events that will auto update a given state property when changed.
      * @usage <input value={state.myNameProp} onChange={this.updateState((state, newValue) => s.myNameProp = newValue , false)} />
      */
-    public updateState(predicate: (state: S, newValue: any) => void, shouldParse = false)
+    public updateStateFromEvent(predicate: (state: S, newValue: any) => void, shouldParse = false)
     {
         return (event: React.FormEvent<{value: string}>) =>
         {

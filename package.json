@@ -1,11 +1,12 @@
 {
   "name": "auto-prop-component",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "A small React component which lets you generically update a component's state rather than relying on dozens of tiny functions.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "prepublish": "tsc -p .",
+    "prepublish": "npm run build",
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
