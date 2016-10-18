@@ -1,6 +1,6 @@
 {
   "name": "auto-prop-component",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "A small React component which lets you generically update a component's state rather than relying on dozens of tiny functions.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/nozzlegear/auto-prop-component#readme",
   "dependencies": {
-    "@types/lodash": "^4.0.21-alpha",
-    "@types/react": "^0.14.27",
-    "react": "^15.1.0"
+    "@types/lodash": "^4.14.37",
+    "@types/react": "^0.14.41",
+    "react": "^15.3.2"
   },
   "devDependencies": {
     "typescript": "2"
