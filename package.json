@@ -1,6 +1,6 @@
 {
   "name": "auto-prop-component",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A small React component which lets you generically update a component's state rather than relying on dozens of tiny functions.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -31,7 +31,6 @@
     "react": "^15.1.0"
   },
   "devDependencies": {
-    "typescript": "^1.9.0-dev.20160616-1.0",
-    "typings": "^1.0.4"
+    "typescript": "2"
   }
 }
