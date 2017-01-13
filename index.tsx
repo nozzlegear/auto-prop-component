@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Bluebird from "bluebird";
 import { mergeWith, clone, isUndefined, isArray, has } from "lodash";
 
 /**
@@ -7,6 +8,15 @@ import { mergeWith, clone, isUndefined, isArray, has } from "lodash";
 export class AutoPropComponent<P, S> extends React.Component<P, S> {
     constructor(props: P, context?: any) {
         super(props, context);
+    }
+
+    /**
+     * An awaitable implementation of React's .setState function.
+     */
+    public setStateAsync(state: Partial<S>) {
+        return new Bluebird<void>((res, rej) => {
+            this.setState(state as S, res);
+        })
     }
 
     /**
@@ -37,10 +47,6 @@ export class AutoPropComponent<P, S> extends React.Component<P, S> {
         return (event) => {
             let state = clone(this.state);
             let value = event.target.value;
-
-            if (!has(event, "target.value")) {
-                console.warn("AutoPropComponent: event does not have a target.value property.");
-            }
 
             predicate(state, shouldParse ? JSON.parse(value) : value);
 

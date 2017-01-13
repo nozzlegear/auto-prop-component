@@ -26,9 +26,6 @@ var AutoPropComponent = (function (_super) {
         return function (event) {
             var state = lodash_1.clone(_this.state);
             var value = event.target.value;
-            if (!lodash_1.has(event, "target.value")) {
-                console.warn("AutoPropComponent: event does not have a target.value property.");
-            }
             predicate(state, shouldParse ? JSON.parse(value) : value);
             _this.setState(state);
         };
