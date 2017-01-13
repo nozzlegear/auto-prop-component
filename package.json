@@ -33,6 +33,6 @@
     "@types/bluebird": "^3.0.37",
     "@types/lodash": "^4.14.37",
     "@types/react": "^0.14.41",
-    "typescript": "2.0.8"
+    "typescript": "2.1.4"
   }
 }

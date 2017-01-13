@@ -34,3 +34,6 @@ node_modules
 
 # Do not check in typings files, else dependent packages can fail to build due to duplicate identifiers.
 typings/
+
+# Ignore built files
+dist
