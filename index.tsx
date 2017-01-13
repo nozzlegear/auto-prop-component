@@ -77,3 +77,5 @@ export class AutoPropComponent<P, S> extends React.Component<P, S> {
         this.setState(finalState, callback);
     }
 }
+
+export default AutoPropComponent;
