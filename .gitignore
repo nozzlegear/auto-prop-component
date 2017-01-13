@@ -37,3 +37,4 @@ typings/
 
 # Ignore built files
 dist
+*.tgz
